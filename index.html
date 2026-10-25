@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <!-- Review preview: analytics and form delivery are intentionally disabled. -->
+  <script>function gtag() {}</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Coherence Coaching helps leaders and organisations develop the capacity to stay clear, connected, and adaptive in complexity.">
+  <title>Coherence Coaching | Coherent Leadership Through Complex Times</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #f7f3ec;
+      --paper: #fffcf7;
+      --ink: #16313a;
+      --ink-soft: #50676c;
+      --teal: #1e6b6b;
+      --teal-deep: #103e46;
+      --teal-pale: #dbeceb;
+      --gold: #bd8430;
+      --gold-light: #e4bd75;
+      --sage: #5e8c73;
+      --line: rgba(22, 49, 58, .14);
+      --white: #fff;
+      --display: "Newsreader", Georgia, serif;
+      --body: "Onest", Arial, sans-serif;
+      --mono: "DM Mono", monospace;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--cream); color: var(--ink); font: 400 16px/1.55 var(--body); overflow-x: hidden; }
+    a { color: inherit; }
+    button, input, textarea, select { font: inherit; }
+    ::selection { background: var(--gold-light); color: var(--teal-deep); }
+    .skip-link { position: fixed; z-index: 1000; left: 1rem; top: -5rem; padding: .8rem 1rem; background: var(--paper); color: var(--ink); border-radius: 99px; transition: top .2s; }
+    .skip-link:focus { top: 1rem; }
+
+    /* Navigation */
+    .nav { position: fixed; inset: 0 0 auto; z-index: 30; padding: 18px clamp(18px, 4vw, 60px); pointer-events: none; }
+    .nav-inner { max-width: 1360px; margin: auto; display: flex; justify-content: space-between; align-items: center; pointer-events: auto; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--white); }
+    .brand-symbol { width: 39px; height: 39px; flex: 0 0 auto; overflow: visible; }
+    .brand-symbol .ring, .brand-symbol .c-arc { fill: none; stroke: currentColor; stroke-linecap: round; }
+    .brand-symbol .ring { stroke-width: 3.2; } .brand-symbol .c-arc { stroke-width: 4.4; } .brand-symbol .forward { fill: currentColor; }
+    .brand-lockup { display: grid; gap: 3px; line-height: 1; }
+    .brand-name { font: 500 1.3rem/.72 var(--display); letter-spacing: -.04em; }
+    .brand-descriptor { font: 500 .42rem/1 var(--mono); letter-spacing: .3em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 26px; align-items: center; color: rgba(255,255,255,.88); font-size: .78rem; font-weight: 500; }
+    .nav-links a { text-decoration: none; }
+    .language-picker { display: flex; align-items: center; gap: 5px; color: inherit; }
+    .language-picker select { max-width: 132px; padding: 8px 22px 8px 8px; border: 1px solid currentColor; border-radius: 999px; background: transparent; color: inherit; font-size: .76rem; cursor: pointer; }
+    .language-picker option { color: #16313a; background: #fffcf7; }
+    .language-picker select:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
+    @media (max-width: 760px) { .nav-links { gap: 8px; } .language-picker select { max-width: 102px; } .nav-button { font-size: .7rem; padding: 9px; } }
+    @media (max-width: 380px) { .nav-links .nav-button { display: none; } }
+    .nav-links a:not(.nav-button):hover { color: var(--gold-light); }
+    .nav-button { border: 1px solid rgba(255,255,255,.65); border-radius: 999px; padding: 10px 15px; transition: .25s ease; }
+    .nav-button:hover { background: var(--paper); border-color: var(--paper); color: var(--teal-deep); }
+    .nav.scrolled { background: rgba(247,243,236,.9); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(22,49,58,.09); padding-block: 11px; }
+    .nav.scrolled .brand, .nav.scrolled .nav-links { color: var(--ink); }
+    .nav.scrolled .nav-button { border-color: var(--teal); color: var(--teal); }
+    .nav.scrolled .nav-button:hover { background: var(--teal); color: white; }
+    @media (max-width: 760px) { .nav-links > a:not(.nav-button) { display: none; } .nav { padding-inline: 18px; } }
+
+    /* Reusable */
+    .container { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+    .eyebrow { display: flex; align-items: center; gap: 9px; margin: 0 0 17px; font: 500 .67rem/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--teal); }
+    .eyebrow::before { content: ""; width: 25px; height: 1px; background: currentColor; }
+    h1, h2, h3, p { margin-top: 0; }
+    h2 { margin-bottom: 20px; font: 500 clamp(2.35rem, 4.7vw, 4.4rem)/.97 var(--display); letter-spacing: -.045em; }
+    h2 em { color: var(--teal); font-style: italic; }
+    .section-copy { max-width: 520px; margin: 0; color: var(--ink-soft); font-size: 1.03rem; }
+    .button { display: inline-flex; justify-content: center; align-items: center; gap: 10px; min-height: 50px; padding: 12px 20px; border-radius: 99px; border: 1px solid transparent; background: var(--gold); color: var(--white); text-decoration: none; font-weight: 600; font-size: .88rem; transition: transform .25s, background .25s, border .25s; }
+    .button:hover { transform: translateY(-3px); background: #a97021; }
+    .button--line { background: transparent; border-color: currentColor; color: currentColor; }
+    .button--line:hover { background: var(--white); color: var(--teal-deep); }
+    .button svg { width: 17px; height: 17px; transition: transform .25s; }
+    .button:hover svg { transform: translateX(3px); }
+    .section { padding: clamp(86px, 12vw, 160px) 0; position: relative; }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+    .reveal.in-view { opacity: 1; transform: none; }
+    .reveal[data-delay="1"] { transition-delay: .12s; }
+    .reveal[data-delay="2"] { transition-delay: .24s; }
+
+    /* Hero */
+    .hero { position: relative; min-height: 780px; min-height: 100svh; overflow: hidden; display: flex; align-items: end; padding: 130px 0 clamp(68px, 9vw, 116px); background: var(--teal-deep); color: var(--white); isolation: isolate; }
+    .hero-photo { position: absolute; z-index: -3; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; animation: soften-in 1.5s ease-out both; }
+    .hero::after { content: ""; position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, rgba(9,41,46,.92) 0%, rgba(11,53,58,.76) 34%, rgba(9,35,38,.13) 72%), linear-gradient(0deg, rgba(6,31,35,.7), transparent 45%); }
+    .hero-orbits { position: absolute; z-index: -1; width: min(72vw, 900px); aspect-ratio: 1; right: -17vw; bottom: -34vw; border: 1px solid rgba(245,234,210,.24); border-radius: 50%; animation: orbit 40s linear infinite; }
+    .hero-orbits::before, .hero-orbits::after { content: ""; position: absolute; border: 1px solid rgba(245,234,210,.18); border-radius: 50%; }
+    .hero-orbits::before { inset: 12%; } .hero-orbits::after { inset: 27%; }
+    .hero-grid { position: absolute; inset: 0; z-index: -1; opacity: .14; background-image: linear-gradient(rgba(255,255,255,.24) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.24) 1px, transparent 1px); background-size: 72px 72px; mask-image: linear-gradient(90deg, black, transparent 65%); }
+    .hero-content { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+    .hero-kicker { display: inline-flex; align-items: center; gap: 9px; margin: 0 0 20px; color: var(--gold-light); font: 500 .68rem/1 var(--mono); letter-spacing: .15em; text-transform: uppercase; }
+    .hero-kicker .pulse { width: 8px; height: 8px; background: var(--gold-light); border-radius: 50%; box-shadow: 0 0 0 0 rgba(228,189,117,.65); animation: pulse 2s infinite; }
+    .hero-question { max-width: 660px; margin: 0 0 17px; font: 500 clamp(2.7rem, 5.2vw, 5.5rem)/.89 var(--display); letter-spacing: -.06em; }
+    .hero-question .question-tail { display: block; max-width: 100%; margin-top: 8px; color: rgba(255,255,255,.96); font-size: .61em; letter-spacing: -.045em; white-space: nowrap; }
+    .hero-question em { color: var(--gold-light); font-style: italic; }
+    .hero-reframe { display: flex; align-items: baseline; gap: 15px; width: min(100%, 575px); margin: 0 0 24px; padding: 14px 24px 15px; border: 1px solid rgba(228,189,117,.68); border-radius: 3px 22px 3px 22px; background: rgba(10,48,55,.52); box-shadow: 0 10px 36px rgba(0,0,0,.14); backdrop-filter: blur(5px); }
+    .hero-reframe span { color: rgba(255,255,255,.92); font: 500 .82rem var(--mono); letter-spacing: .105em; text-transform: uppercase; } .hero-reframe strong { color: var(--gold-light); font: italic 500 clamp(2.15rem, 3.15vw, 3rem)/.85 var(--display); letter-spacing: -.045em; }
+    .hero-summary { width: min(485px, 100%); margin: 0 0 26px; color: rgba(255,255,255,.84); font-size: .98rem; line-height: 1.55; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-meta { position: absolute; right: max(20px, 4vw); bottom: 30px; display: flex; align-items: end; gap: 12px; color: rgba(255,255,255,.74); font: .61rem/1.35 var(--mono); text-transform: uppercase; letter-spacing: .1em; writing-mode: vertical-rl; }
+    .hero-meta::before { content: ""; display: block; width: 1px; height: 70px; background: currentColor; }
+    @keyframes soften-in { from { transform: scale(1.08); filter: saturate(.8); } to { transform: scale(1); filter: saturate(1); } }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    @keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(228,189,117,0); } 100% { box-shadow: 0 0 0 0 rgba(228,189,117,0); } }
+    @media (max-width: 650px) { .hero { min-height: 720px; } .hero::after { background: linear-gradient(90deg, rgba(9,41,46,.9), rgba(11,53,58,.57)), linear-gradient(0deg, rgba(6,31,35,.8), transparent); } .hero-question { letter-spacing: -.055em; } .hero-question .question-tail { font-size: .58em; white-space: normal; } .hero-reframe { gap: 8px; padding-inline: 13px; } .hero-reframe span { font-size: .58rem; } .hero-meta { display: none; } }
+    html:not([lang="en-CA"]) .hero-question .question-tail { white-space: normal; }
+    html:not([lang="en-CA"]) .hero-reframe { flex-wrap: wrap; }
+    html:not([lang="en-CA"]) .capacity-node { font-size: .51rem; overflow-wrap: anywhere; }
+
+    /* Intro */
+    .intro { background: var(--paper); overflow: hidden; }
+    .intro-layout { display: grid; grid-template-columns: 1.03fr .97fr; gap: clamp(40px, 10vw, 150px); align-items: center; }
+    .intro-statement { max-width: 670px; margin: 0; }
+    .intro-lead { max-width: 620px; margin: 0; color: var(--ink); font: 500 clamp(1.6rem, 2.55vw, 2.5rem)/1.14 var(--display); letter-spacing: -.035em; }
+    .intro-align { width: fit-content; margin: 18px 0 17px; padding: 1px 0 4px; color: var(--teal); font: italic 500 clamp(2.05rem, 3.4vw, 3.35rem)/.96 var(--display); letter-spacing: -.055em; }
+    .intro-coda { max-width: 650px; margin: 0; padding: 4px 0 4px 22px; border-left: 2px solid var(--gold); color: var(--ink-soft); font-size: clamp(1.2rem, 1.65vw, 1.55rem); line-height: 1.45; }
+    .intro-coda em { color: var(--teal); font-family: var(--display); font-size: 1.08em; font-weight: 500; } .intro-coda strong { color: var(--gold); font-weight: 700; } .intro-coda i { color: var(--teal-deep); font-family: var(--display); font-size: 1.1em; font-weight: 500; }
+    .principles { position: relative; padding: 26px 0 25px 40px; border-left: 1px solid var(--gold); }
+    .principles::before { content: ""; position: absolute; width: 14px; height: 14px; left: -8px; top: 22px; border: 1px solid var(--gold); background: var(--paper); border-radius: 50%; }
+    .principle { display: grid; grid-template-columns: 31px 1fr; gap: 12px; margin-bottom: 18px; }
+    .principle:last-child { margin-bottom: 0; }
+    .principle-no { color: var(--gold); font: .66rem var(--mono); padding-top: 4px; }
+    .principle p { margin: 0; color: var(--ink-soft); font-size: .91rem; }
+    .principle strong { color: var(--ink); }
+    @media (max-width: 780px) { .intro-layout { grid-template-columns: 1fr; } }
+
+    /* Outcome strand */
+    .outcomes { isolation: isolate; overflow: hidden; background: #dcebea; }
+    .outcomes::before, .outcomes::after { content: ""; position: absolute; z-index: -1; pointer-events: none; width: min(78vw, 1120px); aspect-ratio: 1.7; right: -17vw; top: 10%; border: 1px solid rgba(30,107,107,.19); border-radius: 50%; transform: rotate(-17deg); }
+    .outcomes::after { width: min(63vw, 900px); right: -7vw; top: 21%; border-color: rgba(30,107,107,.11); transform: rotate(-17deg); }
+    .outcomes .container { position: relative; z-index: 1; }
+    .outcomes-header { display: flex; justify-content: space-between; gap: 35px; align-items: end; margin-bottom: 60px; }
+    .outcome-strand { position: relative; display: grid; grid-template-columns: repeat(6, 1fr); align-items: end; gap: 14px; min-height: 375px; padding: 20px 0 0; border-bottom: 1px solid rgba(30,107,107,.34); }
+    .outcome { --bar-height: 198px; position: relative; align-self: end; min-height: var(--bar-height); padding: 25px 18px 20px; border: 1px solid rgba(30,107,107,.12); border-radius: 26px 26px 2px 2px; background: rgba(255,252,247,.88); box-shadow: 0 14px 28px rgba(17,68,72,.06); opacity: 1; transform: none; transition: background .3s, box-shadow .3s; }
+    .outcome::before { content: ""; position: absolute; z-index: 2; inset: -1px; background: #dcebea; transform: scaleY(1); transform-origin: bottom; transition: transform .9s cubic-bezier(.18,.8,.25,1); }
+    .outcome.in-view::before { transform: scaleY(0); }
+    .outcome > * { position: relative; z-index: 1; opacity: 0; transition: opacity .3s ease .45s; } .outcome.in-view > * { opacity: 1; }
+    .outcome:hover { background: var(--paper); box-shadow: 0 20px 35px rgba(17,68,72,.13); }
+    .outcome:nth-child(1) { --bar-height: 198px; } .outcome:nth-child(2) { --bar-height: 226px; } .outcome:nth-child(3) { --bar-height: 254px; } .outcome:nth-child(4) { --bar-height: 282px; } .outcome:nth-child(5) { --bar-height: 310px; } .outcome:nth-child(6) { --bar-height: 338px; }
+    .outcome-num { margin-bottom: 15px; color: var(--teal); font: .61rem var(--mono); letter-spacing: .1em; }
+    .outcome h3 { margin-bottom: 9px; font: 500 1.25rem/1.02 var(--display); letter-spacing: -.025em; }
+    .outcome p { margin: 0; color: var(--ink-soft); font-size: .79rem; line-height: 1.5; }
+    @media (max-width: 900px) { .outcome-strand { grid-template-columns: repeat(3, 1fr); min-height: 0; } .outcome { min-height: max(var(--bar-height), 230px); } }
+    @media (max-width: 520px) { .outcomes-header { display: block; } .outcomes-header .section-copy { margin-top: 25px; } .outcome-strand { grid-template-columns: 1fr 1fr; gap: 12px; } .outcome { min-height: max(var(--bar-height), 230px); padding-inline: 14px; } }
+
+    /* Capacity constellation */
+    .capacities { min-height: calc(100svh - 62px); display: flex; align-items: center; padding: clamp(42px, 5vw, 72px) 0 clamp(34px, 4vw, 56px); background: var(--teal-deep); color: var(--white); overflow: hidden; }
+    .capacities .eyebrow { color: var(--gold-light); } .capacities h2 em { color: var(--gold-light); }
+    .capacities .section-copy { color: rgba(255,255,255,.72); }
+    .capacity-layout { display: grid; grid-template-columns: minmax(300px, .85fr) 1.05fr; gap: clamp(28px, 5vw, 76px); align-items: center; }
+    .capacities h2 { max-width: 490px; margin-bottom: 16px; font-size: clamp(2.6rem, 3.7vw, 4rem); }
+    .constellation { --parallax: 0px; --orbit-turn: 0deg; position: relative; width: min(100%, 510px); aspect-ratio: 1; margin: 0 auto; }
+    .constellation::before, .constellation::after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.14); border-radius: 50%; transition: transform .2s linear; } .constellation::before { inset: 4%; transform: rotate(var(--orbit-turn)); } .constellation::after { inset: 21%; transform: rotate(calc(var(--orbit-turn) * -.65)); }
+    .core { position: absolute; display: grid; place-content: center; text-align: center; left: 50%; top: 50%; width: 150px; height: 150px; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle, rgba(34,111,112,.52), rgba(16,62,70,.03) 68%); }
+    .core::before, .core::after { content: ""; position: absolute; border: 1px solid rgba(228,189,117,.65); border-radius: 50%; } .core::before { inset: 0; } .core::after { inset: 11px; border-color: rgba(228,189,117,.22); }
+    .core-word { position: relative; z-index: 1; color: var(--gold-light); font: italic 500 1.45rem/.88 var(--display); letter-spacing: -.075em; text-shadow: 0 0 20px rgba(228,189,117,.18); } .core-sub { position: relative; z-index: 1; margin-top: 8px; color: rgba(255,255,255,.86); font: 500 .62rem/1 var(--mono); letter-spacing: .15em; text-transform: uppercase; }
+    .capacity-node { --angle: 0deg; --node-radius: var(--start-radius, 290px); position: absolute; left: 50%; top: 50%; width: 78px; height: 78px; transform: translate(-50%, -50%) rotate(var(--angle)) translateY(calc(-1 * (var(--node-radius) + var(--parallax)))) rotate(calc(var(--angle) * -1)) scale(.86); opacity: .26; border: 1px solid rgba(255,255,255,.26); border-radius: 50%; background: rgba(255,255,255,.07); color: var(--white); cursor: pointer; padding: 8px; font: 500 .56rem/1.1 var(--body); transition: transform 1.05s cubic-bezier(.17,.84,.29,1.16), opacity .55s ease, color .25s, background .25s, border-color .25s; transition-delay: calc(var(--order, 0) * 75ms); }
+    .constellation.assembled .capacity-node { --node-radius: 185px; opacity: 1; }
+    .capacity-node:hover, .capacity-node.active { color: var(--node-ink, var(--teal-deep)); background: var(--node-tone, var(--gold-light)); border-color: var(--node-tone, var(--gold-light)); transform: translate(-50%, -50%) rotate(var(--angle)) translateY(calc(-1 * (var(--node-radius) + var(--parallax) - 5px))) rotate(calc(var(--angle) * -1)) scale(1.08); }
+    .capacity-node[data-capacity="presence"] { --node-tone:#e4bd75; --node-ink:#103e46; --detail-wash:rgba(228,189,117,.15); } .capacity-node[data-capacity="regulation"] { --node-tone:#9bd7cf; --node-ink:#103e46; --detail-wash:rgba(155,215,207,.15); } .capacity-node[data-capacity="recovery"] { --node-tone:#a9c99b; --node-ink:#103e46; --detail-wash:rgba(169,201,155,.15); } .capacity-node[data-capacity="communication"] { --node-tone:#bdc9e8; --node-ink:#103e46; --detail-wash:rgba(189,201,232,.15); } .capacity-node[data-capacity="listening"] { --node-tone:#e8c4a5; --node-ink:#103e46; --detail-wash:rgba(232,196,165,.15); } .capacity-node[data-capacity="repair"] { --node-tone:#dba9a6; --node-ink:#103e46; --detail-wash:rgba(219,169,166,.15); } .capacity-node[data-capacity="trust"] { --node-tone:#9bc8c8; --node-ink:#103e46; --detail-wash:rgba(155,200,200,.15); } .capacity-node[data-capacity="ownership"] { --node-tone:#d1ba91; --node-ink:#103e46; --detail-wash:rgba(209,186,145,.15); } .capacity-node[data-capacity="systems"] { --node-tone:#c8b1d9; --node-ink:#103e46; --detail-wash:rgba(200,177,217,.15); }
+    .capacity-node:nth-child(2) { --angle: 0deg; --start-radius: 284px; --order: 0; } .capacity-node:nth-child(3) { --angle: 40deg; --start-radius: 309px; --order: 1; } .capacity-node:nth-child(4) { --angle: 80deg; --start-radius: 278px; --order: 2; } .capacity-node:nth-child(5) { --angle: 120deg; --start-radius: 301px; --order: 3; } .capacity-node:nth-child(6) { --angle: 160deg; --start-radius: 282px; --order: 4; } .capacity-node:nth-child(7) { --angle: 200deg; --start-radius: 309px; --order: 5; } .capacity-node:nth-child(8) { --angle: 240deg; --start-radius: 280px; --order: 6; } .capacity-node:nth-child(9) { --angle: 280deg; --start-radius: 300px; --order: 7; } .capacity-node:nth-child(10) { --angle: 320deg; --start-radius: 289px; --order: 8; }
+    .capacity-detail { --detail-tone:var(--gold-light); --detail-wash:rgba(228,189,117,.15); position: relative; min-height: 174px; width: min(760px, calc(100vw - 80px)); margin: -17px 0 0 clamp(-300px, -18vw, -190px); padding: 22px 32px 21px 39px; overflow: hidden; border: 1px solid var(--detail-tone); border-radius: 24px 7px 24px 7px; background: linear-gradient(115deg, var(--detail-wash), rgba(255,255,255,.055) 58%); box-shadow: 0 13px 28px rgba(0,0,0,.11); transition: border-color .3s, background .3s, transform .3s, opacity .2s; }
+    .capacity-detail::before { content:""; position:absolute; top:0; bottom:0; left:0; width:7px; background:var(--detail-tone); } .capacity-detail.is-changing { opacity:.18; transform:translateY(7px); }
+    .capacity-index { display: inline-block; margin: 0 14px 8px 0; color: var(--detail-tone); font: .6rem var(--mono); letter-spacing: .12em; }
+    .capacity-detail h3 { display: inline; margin: 0; color: var(--detail-tone); font: 500 clamp(1.6rem, 2.3vw, 2.15rem)/.98 var(--display); letter-spacing: -.04em; }
+    .capacity-detail p { max-width: 660px; margin: 12px 0 9px; color: rgba(255,255,255,.86); font-size: .98rem; line-height: 1.48; }
+    .practice { display: inline; color: var(--detail-tone); font-size: .84rem; }
+    .practice b { display: block; margin-bottom: 3px; font: .63rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+    .practice b { display: inline; margin-right: 5px; font: .64rem var(--mono); letter-spacing: .1em; text-transform: uppercase; } .interaction-hint { float: right; color: rgba(255,255,255,.56); font: .62rem var(--mono); letter-spacing: .04em; }
+    @media (max-width: 980px) { .capacities { min-height: auto; } .capacity-layout { grid-template-columns: 1fr; } .constellation { transform: scale(.9); margin-block: -24px; } .capacity-detail { width: min(720px, 100%); margin: -10px auto 0; } }
+    @media (max-width: 520px) {
+      .capacities { padding-block: 56px 42px; }
+      .constellation { width: min(100%, 360px); margin: 12px auto 28px; transform: none; }
+      .core { width: 124px; height: 124px; }
+      .core-word { font-size: 1.2rem; } .core-sub { margin-top: 7px; font-size: .54rem; }
+      .constellation .capacity-node { --mobile-orbit-radius: min(149px, calc(50vw - 51px)); --start-radius: var(--mobile-orbit-radius); width: 62px; height: 62px; padding: 5px; font-size: .46rem; }
+      .constellation.assembled .capacity-node { --node-radius: var(--mobile-orbit-radius); }
+      .capacity-detail { min-height: 0; width: 100%; margin: 0 auto; padding: 20px 22px 22px 28px; border-radius: 22px 7px; }
+      .capacity-detail h3 { font-size: clamp(1.55rem, 8vw, 1.95rem); }
+      .interaction-hint { display: none; }
+    }
+
+    /* Method */
+    .method { background: var(--paper); }
+    .method-header { display: grid; grid-template-columns: .9fr 1.1fr; gap: 60px; align-items: end; margin-bottom: 55px; }
+    .method-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 3vw, 45px); counter-reset: method; }
+    .method-step { position: relative; padding: 70px 4px 0; border-top: 1px solid var(--line); counter-increment: method; }
+    .method-step::before { content: "0" counter(method); position: absolute; top: 19px; left: 0; color: var(--gold); font: .75rem var(--mono); }
+    .method-step::after { content: ""; position: absolute; top: -6px; left: 0; width: 11px; height: 11px; background: var(--teal); border-radius: 50%; }
+    .method-step h3 { margin-bottom: 10px; font: 500 1.8rem/1 var(--display); letter-spacing: -.04em; }
+    .method-step p { margin: 0; color: var(--ink-soft); font-size: .89rem; }
+    @media (max-width: 760px) { .method-header, .method-steps { grid-template-columns: 1fr; } .method-header { gap: 22px; } .method-steps { gap: 42px; } }
+
+    /* Invitation / coach */
+    .coach { position: relative; overflow: hidden; background: #e9ddc6; }
+    .coach::before { content: ""; position: absolute; width: 760px; height: 760px; right: -270px; top: -330px; border: 1px solid rgba(30,107,107,.35); border-radius: 50%; box-shadow: 0 0 0 80px rgba(30,107,107,.06), 0 0 0 160px rgba(30,107,107,.04); }
+    .coach-layout { position: relative; display: grid; grid-template-columns: 1fr .85fr; gap: 70px; align-items: center; }
+    .coach h2 { max-width: 650px; }
+    .coach-card { padding: 38px; border-radius: 50% 50% 5% 5% / 15% 15% 5% 5%; background: var(--teal-deep); color: white; box-shadow: 18px 20px 0 rgba(30,107,107,.11); }
+    .coach-card .eyebrow { color: var(--gold-light); } .coach-card p { margin-bottom: 24px; color: rgba(255,255,255,.74); font-size: .91rem; }
+    .coach-card .button { background: var(--gold-light); color: var(--teal-deep); } .coach-card .button:hover { background: var(--white); }
+    @media (max-width: 780px) { .coach-layout { grid-template-columns: 1fr; gap: 40px; } }
+
+    /* Form / footer */
+    .contact { background: var(--teal-deep); color: white; }
+    .contact-wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(45px, 9vw, 130px); }
+    .contact .eyebrow { color: var(--gold-light); } .contact h2 em { color: var(--gold-light); } .contact .section-copy { color: rgba(255,255,255,.7); }
+    form { padding: 28px; border: 1px solid rgba(255,255,255,.2); border-radius: 28px 7px; background: rgba(255,255,255,.06); }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; } .field.full { grid-column: span 2; }
+    label { display: block; margin-bottom: 6px; color: rgba(255,255,255,.8); font-size: .75rem; }
+    input, select, textarea { width: 100%; border: 1px solid rgba(255,255,255,.25); border-radius: 10px; padding: 12px 13px; background: rgba(255,255,255,.08); color: white; outline: none; }
+    select option { color: var(--ink); } textarea { min-height: 103px; resize: vertical; }
+    input:focus, select:focus, textarea:focus { border-color: var(--gold-light); box-shadow: 0 0 0 3px rgba(228,189,117,.14); }
+    .form-actions { display: flex; justify-content: space-between; gap: 12px; align-items: center; margin-top: 20px; } .form-note { margin: 0; color: rgba(255,255,255,.52); font-size: .68rem; }
+    .form-success { display: none; margin-top: 15px; color: var(--gold-light); font-size: .9rem; }
+    .form-success.is-error { color: #ffd0c6; }
+    footer { display: flex; justify-content: space-between; align-items: end; gap: 20px; padding: 28px max(20px, 4vw); background: #0a3037; color: rgba(255,255,255,.58); font-size: .7rem; }
+    .footer-brand { display: flex; align-items: center; gap: 11px; color: white; } .footer-brand .brand-symbol { width: 42px; height: 42px; } .footer-brand .brand-name { font-size: 1.36rem; } .footer-brand .brand-descriptor { font-size: .43rem; } footer a { color: rgba(255,255,255,.78); text-decoration-color: rgba(228,189,117,.7); text-underline-offset: 3px; } footer a:hover { color: var(--gold-light); }
+    @media (max-width: 760px) { .contact-wrap { grid-template-columns: 1fr; } .form-grid { grid-template-columns: 1fr; } .field.full { grid-column: auto; } .form-actions, footer { align-items: start; flex-direction: column; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Coherence Coaching home"><svg class="brand-symbol" viewBox="0 0 100 100" aria-hidden="true"><circle class="ring" cx="50" cy="50" r="43"/><path class="c-arc" d="M73 27 A31 31 0 1 0 73 73"/><path class="c-arc" d="M64 37 A18 18 0 1 0 64 63"/><polygon class="forward" points="43,42 43,58 55,50"/><polygon class="forward" points="57,42 57,58 69,50"/></svg><span class="brand-lockup"><span class="brand-name">Coherence</span><span class="brand-descriptor">Coaching</span></span></a>
+      <div class="nav-links"><a href="#capacities">Capacities</a><a href="#approach">Approach</a><a href="#coach">For Coaches</a><a class="nav-button" href="#contact">Begin a Conversation</a><label class="language-picker"><span aria-hidden="true">◎</span><select id="language" aria-label="Language"><option value="en">🇨🇦 English</option><option value="fr">🇫🇷 Français</option><option value="nl">🇳🇱 Nederlands</option><option value="de">🇩🇪 Deutsch</option></select></label></div>
+    </div>
+  </nav>
+  <main id="main">
+    <section class="hero" id="top">
+      <img class="hero-photo" src="assets/coherence-coaching-hero.png" alt="An Asian woman facilitates a coaching conversation around a circular table">
+      <div class="hero-grid" aria-hidden="true"></div><div class="hero-orbits" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-kicker"><span class="pulse"></span> Coherent leadership through complex times</p>
+        <h1 class="hero-question">What if the greatest<br>business challenge<br>of our time is <em>not</em><br><span class="question-tail">a lack of intelligence?</span></h1>
+        <p class="hero-reframe"><span>But a lack of</span><strong>coherence.</strong></p>
+        <p class="hero-summary">Coherence Coaching develops the human capacities that help organisations think clearly, relate honestly, and move wisely in a changing world.</p>
+        <div class="hero-actions"><a class="button" href="#contact">Explore a coaching engagement <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="button button--line" href="#capacities">See the capacities</a></div>
+      </div>
+      <div class="hero-meta">Coherence Earth<br>× Biofield Institute<br>× SOUL Squad</div>
+    </section>
+
+    <section class="section intro" id="work">
+      <div class="container intro-layout">
+        <div class="reveal"><p class="eyebrow">The work</p><div class="intro-statement"><p class="intro-coda">Shift your organisation from <em>mere coping</em> to <strong>catalytic coherence</strong>, driving breakthrough performance through <i>deep authenticity</i> and <strong>business alignment</strong> that becomes <em>felt and measurable</em>.</p></div></div>
+        <div class="principles reveal" data-delay="1">
+          <div class="principle"><span class="principle-no">01</span><p><strong>Practical, not performative.</strong> We work with real decisions, relationships, conflicts, and change.</p></div>
+          <div class="principle"><span class="principle-no">02</span><p><strong>Human, not soft.</strong> People are an organisation’s greatest asset. When they are out of alignment, that asset can become a liability.</p></div>
+          <div class="principle"><span class="principle-no">03</span><p><strong>Tailored, not prescribed.</strong> We tailor every programme with your organisation’s specific culture, goals, and future in mind.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section outcomes" id="outcomes">
+      <div class="container">
+        <div class="outcomes-header reveal"><div><p class="eyebrow">Observable change</p><h2>What becomes<br><em>possible</em></h2></div><p class="section-copy">Coherence is how organisations build a stronger future: through the speed, quality, and integrity with which they meet their work.</p></div>
+        <div class="outcome-strand">
+          <article class="outcome reveal"><div class="outcome-num">01 / 06</div><h3>Less decision drag</h3><p>Clearer decision rights, fewer loops, and less rework across functions.</p></article>
+          <article class="outcome reveal" data-delay="1"><div class="outcome-num">02 / 06</div><h3>Lower relational friction</h3><p>Hard conversations arrive earlier, with more skill and less escalation.</p></article>
+          <article class="outcome reveal" data-delay="2"><div class="outcome-num">03 / 06</div><h3>Trust in motion</h3><p>People can ask, challenge, and surface what matters without unnecessary risk.</p></article>
+          <article class="outcome reveal"><div class="outcome-num">04 / 06</div><h3>Adaptive response</h3><p>Teams sense, learn, and adjust without losing their centre.</p></article>
+          <article class="outcome reveal" data-delay="1"><div class="outcome-num">05 / 06</div><h3>Leaders who last</h3><p>Greater presence, recovery, and capacity to adapt and change under sustained pressure.</p></article>
+          <article class="outcome reveal" data-delay="2"><div class="outcome-num">06 / 06</div><h3>Clearer signals</h3><p>Values, incentives, information, and action begin to point in the same direction.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section capacities" id="capacities">
+      <div class="container capacity-layout">
+        <div class="reveal"><p class="eyebrow">Capacity constellation</p><h2>Nine ways to practise <em>coherence</em></h2><p class="section-copy">These are a shared working vocabulary, used to notice patterns, guide development, and make practical change visible. Select a capacity to explore it.</p></div>
+        <div class="reveal" data-delay="1">
+          <div class="constellation" aria-label="Interactive coherence capacities">
+            <div class="core" role="img" aria-label="Coherence in Practice"><span class="core-word">Coherence</span><span class="core-sub">In Practice</span></div>
+            <button class="capacity-node active" data-capacity="presence">Self-awareness<br>&amp; presence</button><button class="capacity-node" data-capacity="regulation">Emotional<br>regulation</button><button class="capacity-node" data-capacity="recovery">Resilience<br>&amp; recovery</button><button class="capacity-node" data-capacity="communication">Authentic<br>communication</button><button class="capacity-node" data-capacity="listening">Deep listening<br>&amp; empathy</button><button class="capacity-node" data-capacity="repair">Conflict literacy<br>&amp; repair</button><button class="capacity-node" data-capacity="trust">Trust &amp;<br>psychological safety</button><button class="capacity-node" data-capacity="ownership">Shared ownership<br>&amp; leadership</button><button class="capacity-node" data-capacity="systems">Systems thinking<br>&amp; discernment</button>
+          </div>
+          <div class="capacity-detail" aria-live="polite"><span class="capacity-index">01 / 09</span><h3>Self-awareness and presence</h3><p>Recognizing one's internal state, assumptions, behaviour, and effect on others while staying attentive to what is happening now.</p><div class="practice"><b>In practice</b>Noticing stress signals before responding.</div><span class="interaction-hint">Select another orbit to explore</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section method" id="approach">
+      <div class="container"><div class="method-header reveal"><div><p class="eyebrow">An engagement, not a curriculum</p><h2>Designed around<br>your organisation’s <em>best future</em></h2></div><p class="section-copy">For leaders, teams, and organisations navigating complexity, growth, or change. Coaching is individualised, practical, consent-aware, and connected to the levers that matter most.</p></div>
+        <div class="method-steps"><article class="method-step reveal"><h3>Notice</h3><p>We establish a shared picture of present conditions, drawing on conversation, observation, and fit-for-purpose assessment.</p></article><article class="method-step reveal" data-delay="1"><h3>Practise</h3><p>Leaders and teams build capacity through coaching, reflection, and application to their immediate challenges.</p></article><article class="method-step reveal" data-delay="2"><h3>Learn</h3><p>We make change visible, honour privacy, and translate useful patterns into wiser next steps for the system.</p></article></div>
+      </div>
+    </section>
+
+    <section class="section coach" id="coach"><div class="container coach-layout"><div class="reveal"><p class="eyebrow">A growing practice</p><h2>Bring this work<br>to the leaders<br>you <em>serve.</em></h2><p class="section-copy">Coherence Coaching is building a community of practitioners able to work faithfully and skilfully with the framework in real organisational settings.</p></div><aside class="coach-card reveal" data-delay="1"><p class="eyebrow">For experienced practitioners</p><p>Are you a coach, facilitator, or organisational-development practitioner drawn to this work? We are inviting conversation with people who can help this practice take root with integrity.</p><a class="button" href="#contact">Become a Coherence Coach <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></aside></div></section>
+
+    <section class="section contact" id="contact"><div class="container contact-wrap"><div class="reveal"><p class="eyebrow">Start here</p><h2>Let’s make<br>room for a wiser <em>next move.</em></h2><p class="section-copy">Tell us what your organisation, team, or practice is navigating. We’ll respond personally to explore whether there is a useful fit.</p></div><div class="reveal" data-delay="1"><form id="contact-form" action="https://formspree.io/f/mppwvadq" method="POST"><div class="form-grid"><div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div><div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required></div><div class="field full"><label for="role">Role, organisation, or practice</label><input id="role" name="role"></div><div class="field full"><label for="interest">I’m interested in</label><select id="interest" name="interest"><option>Coaching for my organisation</option><option>Coaching for myself or my leadership team</option><option>Becoming a Coherence Coach</option><option>Exploring a partnership</option></select></div><div class="field full"><label for="message">What is calling for attention?</label><textarea id="message" name="message"></textarea></div></div><div class="form-actions"><p class="form-note">No spam. No pressure. A real conversation.</p><button class="button" type="submit">Send inquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div><p class="form-success" role="status" aria-live="polite"></p></form></div></div></section>
+  </main>
+  <footer><div class="footer-brand"><svg class="brand-symbol" viewBox="0 0 100 100" aria-hidden="true"><circle class="ring" cx="50" cy="50" r="43"/><path class="c-arc" d="M73 27 A31 31 0 1 0 73 73"/><path class="c-arc" d="M64 37 A18 18 0 1 0 64 63"/><polygon class="forward" points="43,42 43,58 55,50"/><polygon class="forward" points="57,42 57,58 69,50"/></svg><span class="brand-lockup"><span class="brand-name">Coherence</span><span class="brand-descriptor">Coaching</span></span></div><div>Delivered by the <a href="https://www.biofieldawareness.com" target="_blank" rel="noopener noreferrer">Biofield Awareness Institute</a>, in affiliation with <a href="https://coherence.earth" target="_blank" rel="noopener noreferrer">Coherence Earth</a>.</div><div>© 2026 Coherence Coaching Collaborative</div></footer>
+  <script>
+    // Language packs: brand and partner names intentionally remain unchanged.
+    const translations = {
+      en: { practice: 'In practice', hint: 'Select another orbit to explore', sending: 'Sending inquiry…', received: 'Inquiry received', success: 'Thank you. Your inquiry has been received and someone from the team will be in touch.', error: 'We could not send your inquiry just now. Please try again in a moment.' },
+      fr: {
+        practice: 'En pratique', hint: 'Choisissez un autre cercle à explorer', sending: 'Envoi de votre demande…', received: 'Demande reçue', success: 'Merci. Nous avons bien reçu votre demande et un membre de notre équipe communiquera avec vous.', error: 'Nous ne pouvons pas envoyer votre demande pour le moment. Veuillez réessayer dans quelques instants.',
+        text: [
+          'Aller au contenu principal','Capacités','Approche','Pour les coachs','Entamer une conversation',
+          'Un leadership cohérent en période de complexité',
+          'Et si le plus grand défi<br>des organisations<br>de notre époque n’était <em>pas</em><br><span class="question-tail">un manque d’intelligence?</span>',
+          '<span>Mais plutôt un manque de</span><strong>cohérence.</strong>',
+          'Coherence Coaching développe les capacités humaines qui aident les organisations à penser clairement, à entretenir des relations authentiques et à agir avec discernement dans un monde en évolution.',
+          'Explorer un accompagnement','Découvrir les capacités',
+          'Notre travail','Faites passer votre organisation de la <em>simple adaptation</em> à une <strong>cohérence catalytique</strong>, pour atteindre une performance remarquable grâce à une <i>authenticité profonde</i> et à un <strong>alignement organisationnel</strong> qui se <em>ressent et se mesure</em>.',
+          '<strong>Pragmatique, sans faux-semblants.</strong> Nous travaillons sur des décisions, des relations, des conflits et des changements bien réels.',
+          '<strong>Humain, mais pas secondaire.</strong> Les personnes sont le plus grand atout d’une organisation. Lorsqu’elles ne sont pas alignées, cet atout peut devenir un handicap.',
+          '<strong>Sur mesure, jamais imposé.</strong> Nous adaptons chaque programme à la culture, aux objectifs et à l’avenir propres à votre organisation.',
+          'Un changement observable','Ce qui devient<br><em>possible</em>','La cohérence aide les organisations à bâtir un avenir plus solide grâce à la rapidité, à la qualité et à l’intégrité avec lesquelles elles accomplissent leur travail.',
+          'Des décisions plus fluides','Des responsabilités décisionnelles plus claires, moins d’allers-retours et moins de travail à reprendre entre les équipes.',
+          'Moins de frictions relationnelles','Les conversations difficiles ont lieu plus tôt, avec plus d’habileté et moins d’escalade.',
+          'La confiance en action','Les personnes peuvent poser des questions, remettre en question et exprimer ce qui compte sans risque inutile.',
+          'Une réponse adaptative','Les équipes observent, apprennent et s’adaptent sans perdre leur équilibre.',
+          'Des leaders qui durent','Davantage de présence, de récupération et de capacité à s’adapter et à changer sous une pression soutenue.',
+          'Des signaux plus clairs','Les valeurs, les incitatifs, l’information et les actions commencent à converger.',
+          'Constellation des capacités','Neuf façons de cultiver la <em>cohérence</em>','Ces capacités forment un vocabulaire commun pour repérer les tendances, guider le développement et rendre les changements concrets visibles. Choisissez une capacité pour l’explorer.',
+          'En pratique','Conscience de soi<br>et présence','Régulation<br>émotionnelle','Résilience<br>et récupération','Communication<br>authentique','Écoute profonde<br>et empathie','Gestion des conflits<br>et réparation','Confiance et<br>sécurité psychologique','Responsabilité et<br>leadership partagés','Pensée systémique<br>et discernement',
+          'Un accompagnement, pas un programme figé','Conçu autour du<br><em>meilleur avenir</em> de votre organisation','Pour les leaders, les équipes et les organisations qui traversent la complexité, la croissance ou le changement. L’accompagnement est personnalisé, pragmatique, respectueux du consentement et lié aux leviers les plus importants.',
+          'Observer','Nous établissons une compréhension commune de la situation actuelle à partir de conversations, d’observations et d’évaluations adaptées.',
+          'Pratiquer','Les leaders et les équipes développent leurs capacités par le coaching, la réflexion et l’application à leurs défis immédiats.',
+          'Apprendre','Nous rendons le changement visible, respectons la confidentialité et transformons les tendances utiles en prochaines étapes éclairées pour le système.',
+          'Une pratique en plein essor','Mettez ce travail<br>au service des leaders<br>que vous <em>accompagnez.</em>','Coherence Coaching bâtit une communauté de professionnels capables d’appliquer ce cadre avec compétence et intégrité dans de véritables contextes organisationnels.',
+          'Pour les professionnels expérimentés','Vous êtes coach, facilitateur ou spécialiste du développement organisationnel et ce travail vous interpelle? Nous souhaitons échanger avec des personnes qui peuvent aider cette pratique à prendre racine avec intégrité.','Devenir coach en cohérence',
+          'Commencer ici','Faisons place<br>à une prochaine étape<br>plus <em>éclairée.</em>','Parlez-nous de la situation que traverse votre organisation, votre équipe ou votre pratique. Nous vous répondrons personnellement pour voir si notre approche vous convient.',
+          'Nom','Courriel professionnel','Fonction, organisation ou pratique','Je souhaite','Du coaching pour mon organisation','Du coaching pour moi ou mon équipe de direction','Devenir coach en cohérence','Explorer un partenariat','Qu’est-ce qui demande votre attention?','Sans pourriel. Sans pression. Une vraie conversation.','Envoyer ma demande',
+          'Offert par le <a href="https://www.biofieldawareness.com" target="_blank" rel="noopener noreferrer">Biofield Awareness Institute</a>, en affiliation avec <a href="https://coherence.earth" target="_blank" rel="noopener noreferrer">Coherence Earth</a>.'
+        ],
+        capacities: {
+          presence: ['01 / 09','Conscience de soi et présence','Reconnaître son état intérieur, ses hypothèses, ses comportements et son effet sur les autres, tout en restant attentif à ce qui se passe dans le moment présent.','Reconnaître les signes de stress avant de répondre et distinguer les observations des suppositions.'],
+          regulation: ['02 / 09','Régulation émotionnelle','Gérer suffisamment le stress et l’activation pour répondre intentionnellement plutôt que de réagir automatiquement.','Faire une pause avant une réponse difficile et choisir une réaction adaptée à la situation.'],
+          recovery: ['03 / 09','Résilience et récupération','Maintenir son efficacité sous pression et retrouver son équilibre après une perturbation, un conflit ou un changement.','Se remettre d’une réunion difficile et reprendre le travail sans conserver une tension inutile.'],
+          communication: ['04 / 09','Communication authentique','Exprimer clairement, directement et adéquatement les informations, les besoins, les préoccupations et les points de vue.','Soulever rapidement un enjeu et nommer les incertitudes sans créer d’alarme inutile.'],
+          listening: ['05 / 09','Écoute profonde et empathie','Comprendre le sens et l’expérience de l’autre avant d’interpréter, de répondre ou de chercher une solution.','Reformuler ce qui a été entendu et poser des questions de clarification avant de chercher des solutions.'],
+          repair: ['06 / 09','Gestion des conflits et réparation','Reconnaître les tensions tôt, aborder les désaccords de façon constructive et rétablir des relations de travail après une rupture.','Cerner le véritable désaccord, reconnaître les conséquences et convenir d’une réparation concrète.'],
+          trust: ['07 / 09','Confiance et sécurité psychologique','Créer des conditions où chacun peut parler franchement, poser des questions, reconnaître ses erreurs et exprimer ses préoccupations sans risque interpersonnel inutile.','Permettre de discuter des incertitudes et répondre de façon constructive lorsqu’une personne signale un problème.'],
+          ownership: ['08 / 09','Responsabilité et leadership partagés','Assumer la responsabilité des résultats tout en permettant aux autres de contribuer, d’exercer leur jugement et d’agir.','Clarifier les responsabilités décisionnelles tout en aidant les autres à exercer leur leadership dans leur rôle.'],
+          systems: ['09 / 09','Pensée systémique et discernement','Tenir compte du contexte, des interdépendances, des compromis et des conséquences à long terme dans les décisions.','Voir au-delà d’une solution immédiate et distinguer la pression urgente de l’importance stratégique.']
+        }
+      },
+      nl: {
+        practice: 'In de praktijk', hint: 'Kies een andere cirkel om te verkennen', sending: 'Aanvraag verzenden…', received: 'Aanvraag ontvangen', success: 'Dank u. Uw aanvraag is ontvangen en iemand van ons team neemt contact met u op.', error: 'Uw aanvraag kon op dit moment niet worden verzonden. Probeer het zo opnieuw.',
+        text: [
+          'Naar de hoofdinhoud','Capaciteiten','Aanpak','Voor coaches','Ga in gesprek',
+          'Samenhangend leiderschap in complexe tijden',
+          'Wat als de grootste<br>uitdaging voor organisaties<br>van deze tijd <em>geen</em><br><span class="question-tail">gebrek aan intelligentie is?</span>',
+          '<span>Maar een gebrek aan</span><strong>samenhang.</strong>',
+          'Coherence Coaching ontwikkelt de menselijke capaciteiten die organisaties helpen helder te denken, oprecht contact te maken en met wijsheid te handelen in een veranderende wereld.',
+          'Ontdek coaching','Bekijk de capaciteiten',
+          'Ons werk','Help uw organisatie de stap te zetten van <em>slechts overeind blijven</em> naar <strong>katalytische samenhang</strong>, voor baanbrekende prestaties door <i>diepe authenticiteit</i> en <strong>organisatorische afstemming</strong> die <em>voelbaar en meetbaar</em> wordt.',
+          '<strong>Praktisch, niet voor de vorm.</strong> We werken met echte besluiten, relaties, conflicten en veranderingen.',
+          '<strong>Menselijk, niet vrijblijvend.</strong> Mensen zijn het grootste kapitaal van een organisatie. Als zij niet op één lijn zitten, kan dat kapitaal een kwetsbaarheid worden.',
+          '<strong>Op maat, niet voorgeschreven.</strong> We stemmen elk programma af op de specifieke cultuur, doelen en toekomst van uw organisatie.',
+          'Zichtbare verandering','Wat mogelijk<br><em>wordt</em>','Samenhang helpt organisaties een sterkere toekomst op te bouwen: door de snelheid, kwaliteit en integriteit waarmee zij hun werk doen.',
+          'Vlottere besluitvorming','Duidelijkere beslissingsbevoegdheden, minder omwegen en minder dubbel werk tussen afdelingen.',
+          'Minder relationele wrijving','Moeilijke gesprekken vinden eerder plaats, met meer vaardigheid en minder escalatie.',
+          'Vertrouwen in actie','Mensen kunnen vragen stellen, zaken ter discussie stellen en benoemen wat ertoe doet zonder onnodig risico.',
+          'Adaptief handelen','Teams signaleren, leren en passen zich aan zonder hun evenwicht te verliezen.',
+          'Leiders die duurzaam inzetbaar zijn','Meer aanwezigheid, herstelvermogen en vermogen om zich aan te passen en te veranderen onder aanhoudende druk.',
+          'Helderdere signalen','Waarden, prikkels, informatie en handelen wijzen steeds meer dezelfde kant op.',
+          'Constellatie van capaciteiten','Negen manieren om <em>samenhang</em> te oefenen','Deze capaciteiten vormen een gemeenschappelijke taal om patronen te herkennen, ontwikkeling te begeleiden en praktische verandering zichtbaar te maken. Kies een capaciteit om deze te verkennen.',
+          'In de praktijk','Zelfbewustzijn<br>en aanwezigheid','Emotionele<br>regulatie','Veerkracht<br>en herstel','Authentieke<br>communicatie','Diep luisteren<br>en empathie','Conflicthantering<br>en herstel','Vertrouwen en<br>psychologische veiligheid','Gedeeld eigenaarschap<br>en leiderschap','Systeemdenken<br>en onderscheidingsvermogen',
+          'Een samenwerking, geen vast lesprogramma','Ontworpen rond de<br><em>beste toekomst</em> van uw organisatie','Voor leiders, teams en organisaties die omgaan met complexiteit, groei of verandering. Coaching is persoonlijk, praktisch, respecteert toestemming en sluit aan bij de belangrijkste hefbomen voor verandering.',
+          'Waarnemen','We vormen samen een beeld van de huidige situatie op basis van gesprekken, observaties en passende evaluaties.',
+          'Oefenen','Leiders en teams ontwikkelen capaciteiten door coaching, reflectie en toepassing op hun directe uitdagingen.',
+          'Leren','We maken verandering zichtbaar, respecteren privacy en vertalen bruikbare patronen naar wijzere vervolgstappen voor het systeem.',
+          'Een groeiende praktijk','Breng dit werk<br>naar de leiders die u<br><em>begeleidt.</em>','Coherence Coaching bouwt aan een gemeenschap van professionals die dit kader deskundig en integer kunnen toepassen in echte organisaties.',
+          'Voor ervaren professionals','Bent u coach, facilitator of organisatieontwikkelaar en spreekt dit werk u aan? We gaan graag in gesprek met mensen die deze praktijk op integere wijze helpen wortel schieten.','Word een Coherence Coach',
+          'Begin hier','Maak ruimte<br>voor een wijzere <em>volgende stap.</em>','Vertel ons waar uw organisatie, team of praktijk mee te maken heeft. We reageren persoonlijk om te verkennen of er een goede match is.',
+          'Naam','Zakelijk e-mailadres','Functie, organisatie of praktijk','Ik ben geïnteresseerd in','Coaching voor mijn organisatie','Coaching voor mijzelf of mijn leiderschapsteam','Coherence Coach worden','Een samenwerking verkennen','Wat vraagt om aandacht?','Geen spam. Geen druk. Een echt gesprek.','Verstuur aanvraag',
+          'Aangeboden door het <a href="https://www.biofieldawareness.com" target="_blank" rel="noopener noreferrer">Biofield Awareness Institute</a>, in samenwerking met <a href="https://coherence.earth" target="_blank" rel="noopener noreferrer">Coherence Earth</a>.'
+        ],
+        capacities: {
+          presence: ['01 / 09','Zelfbewustzijn en aanwezigheid','Uw innerlijke toestand, aannames, gedrag en effect op anderen herkennen, terwijl u aandacht houdt voor wat er nu gebeurt.','Stresssignalen opmerken voordat u reageert en observaties onderscheiden van aannames.'],
+          regulation: ['02 / 09','Emotionele regulatie','Stress en spanning voldoende beheersen om bewust te antwoorden in plaats van automatisch te reageren.','Even pauzeren voor een moeilijk antwoord en een reactie kiezen die past bij de situatie.'],
+          recovery: ['03 / 09','Veerkracht en herstel','Effectief blijven onder druk en het evenwicht hervinden na verstoring, conflict of verandering.','Herstellen na een moeilijk gesprek en opnieuw aan de slag gaan zonder onnodige spanning mee te dragen.'],
+          communication: ['04 / 09','Authentieke communicatie','Informatie, behoeften, zorgen en perspectieven duidelijk, direct en passend uitdrukken.','Een kwestie vroegtijdig aankaarten en onzekerheid benoemen zonder onnodige onrust te veroorzaken.'],
+          listening: ['05 / 09','Diep luisteren en empathie','De betekenis en ervaring van een ander begrijpen voordat u interpreteert, reageert of oplossingen zoekt.','Teruggeven wat u hebt gehoord en verhelderende vragen stellen voordat u naar oplossingen gaat.'],
+          repair: ['06 / 09','Conflicthantering en herstel','Spanning vroeg herkennen, constructief omgaan met meningsverschillen en werkbare relaties herstellen na een breuk.','Het werkelijke meningsverschil vaststellen, de impact erkennen en een praktische herstelactie afspreken.'],
+          trust: ['07 / 09','Vertrouwen en psychologische veiligheid','Omstandigheden creëren waarin mensen open kunnen spreken, vragen kunnen stellen, fouten kunnen erkennen en zorgen kunnen delen zonder onnodig persoonlijk risico.','Onzekerheid bespreekbaar maken en constructief reageren wanneer iemand een probleem signaleert.'],
+          ownership: ['08 / 09','Gedeeld eigenaarschap en leiderschap','Verantwoordelijkheid nemen voor resultaten en anderen tegelijk in staat stellen bij te dragen, zelf te oordelen en handelingsruimte te benutten.','Beslissingsbevoegdheden verduidelijken en anderen ondersteunen om vanuit hun rol leiding te nemen.'],
+          systems: ['09 / 09','Systeemdenken en onderscheidingsvermogen','Bij beslissingen rekening houden met context, onderlinge afhankelijkheden, afwegingen en gevolgen op langere termijn.','Verder kijken dan een directe oplossing en onderscheid maken tussen acute druk en strategisch belang.']
+        }
+      },
+      de: {
+        practice: 'In der Praxis', hint: 'Wählen Sie einen weiteren Kreis', sending: 'Anfrage wird gesendet…', received: 'Anfrage erhalten', success: 'Vielen Dank. Ihre Anfrage ist eingegangen. Jemand aus unserem Team wird sich bei Ihnen melden.', error: 'Ihre Anfrage konnte gerade nicht gesendet werden. Bitte versuchen Sie es gleich noch einmal.',
+        text: [
+          'Zum Hauptinhalt springen','Fähigkeiten','Ansatz','Für Coaches','Gespräch beginnen',
+          'Kohärente Führung in komplexen Zeiten',
+          'Was, wenn die größte<br>Herausforderung für Organisationen<br>unserer Zeit <em>kein</em><br><span class="question-tail">Mangel an Intelligenz ist?</span>',
+          '<span>Sondern ein Mangel an</span><strong>Kohärenz.</strong>',
+          'Coherence Coaching entwickelt menschliche Fähigkeiten, die Organisationen helfen, klar zu denken, aufrichtig miteinander umzugehen und in einer sich wandelnden Welt umsichtig zu handeln.',
+          'Coaching kennenlernen','Fähigkeiten entdecken',
+          'Unsere Arbeit','Führen Sie Ihre Organisation vom <em>bloßen Bewältigen</em> zu <strong>katalytischer Kohärenz</strong> und ermöglichen Sie herausragende Leistung durch <i>tiefe Authentizität</i> und <strong>organisatorische Ausrichtung</strong>, die <em>spürbar und messbar</em> wird.',
+          '<strong>Praktisch, nicht bloß dargestellt.</strong> Wir arbeiten mit realen Entscheidungen, Beziehungen, Konflikten und Veränderungen.',
+          '<strong>Menschlich, nicht nebensächlich.</strong> Menschen sind das größte Kapital einer Organisation. Fehlt die gemeinsame Ausrichtung, kann daraus eine Belastung werden.',
+          '<strong>Maßgeschneidert, nicht vorgegeben.</strong> Wir gestalten jedes Programm passend zur spezifischen Kultur, den Zielen und der Zukunft Ihrer Organisation.',
+          'Beobachtbare Veränderung','Was möglich<br><em>wird</em>','Kohärenz hilft Organisationen, eine stärkere Zukunft aufzubauen: durch die Geschwindigkeit, Qualität und Integrität, mit der sie ihre Arbeit angehen.',
+          'Schnellere Entscheidungen','Klarere Entscheidungsbefugnisse, weniger Schleifen und weniger Nacharbeit zwischen Bereichen.',
+          'Weniger Reibung in Beziehungen','Schwierige Gespräche finden früher statt, mit mehr Geschick und weniger Eskalation.',
+          'Vertrauen in Bewegung','Menschen können fragen, hinterfragen und Wichtiges ansprechen, ohne unnötige Risiken einzugehen.',
+          'Anpassungsfähiges Handeln','Teams nehmen wahr, lernen und passen sich an, ohne ihre Mitte zu verlieren.',
+          'Führung, die Bestand hat','Mehr Präsenz, Erholung und Fähigkeit, sich unter anhaltendem Druck anzupassen und zu verändern.',
+          'Klarere Signale','Werte, Anreize, Informationen und Handlungen beginnen in dieselbe Richtung zu weisen.',
+          'Konstellation der Fähigkeiten','Neun Wege, <em>Kohärenz</em> zu üben','Diese Fähigkeiten bilden eine gemeinsame Sprache, um Muster zu erkennen, Entwicklung zu begleiten und praktische Veränderung sichtbar zu machen. Wählen Sie eine Fähigkeit, um sie zu erkunden.',
+          'In der Praxis','Selbstbewusstsein<br>und Präsenz','Emotionale<br>Regulation','Resilienz<br>und Erholung','Authentische<br>Kommunikation','Tiefes Zuhören<br>und Empathie','Konfliktkompetenz<br>und Klärung','Vertrauen und<br>psychologische Sicherheit','Geteilte Verantwortung<br>und Führung','Systemdenken<br>und Urteilsvermögen',
+          'Eine Zusammenarbeit, kein Lehrplan','Gestaltet für die<br><em>beste Zukunft</em> Ihrer Organisation','Für Führungskräfte, Teams und Organisationen, die Komplexität, Wachstum oder Veränderung gestalten. Das Coaching ist individuell, praxisnah, achtet auf Einverständnis und setzt an den wichtigsten Hebeln an.',
+          'Wahrnehmen','Wir entwickeln ein gemeinsames Bild der aktuellen Situation anhand von Gesprächen, Beobachtungen und zweckmäßigen Einschätzungen.',
+          'Üben','Führungskräfte und Teams entwickeln Fähigkeiten durch Coaching, Reflexion und die Anwendung auf ihre aktuellen Herausforderungen.',
+          'Lernen','Wir machen Veränderungen sichtbar, achten die Privatsphäre und übersetzen hilfreiche Muster in kluge nächste Schritte für das System.',
+          'Eine wachsende Praxis','Bringen Sie diese Arbeit<br>zu den Führungskräften,<br>die Sie <em>begleiten.</em>','Coherence Coaching baut eine Gemeinschaft von Fachleuten auf, die den Ansatz kompetent und integer in realen Organisationen anwenden können.',
+          'Für erfahrene Fachleute','Sind Sie Coach, Moderatorin oder Moderator oder in der Organisationsentwicklung tätig und fühlen sich von dieser Arbeit angesprochen? Wir suchen den Austausch mit Menschen, die diese Praxis integer mit aufbauen möchten.','Coherence Coach werden',
+          'Hier beginnen','Schaffen wir Raum<br>für einen klugen <em>nächsten Schritt.</em>','Erzählen Sie uns, was Ihre Organisation, Ihr Team oder Ihre Praxis gerade bewegt. Wir antworten persönlich und erkunden gemeinsam, ob unser Angebot passt.',
+          'Name','Geschäftliche E-Mail-Adresse','Rolle, Organisation oder Praxis','Ich interessiere mich für','Coaching für meine Organisation','Coaching für mich oder mein Führungsteam','Coherence Coach werden','Eine Partnerschaft erkunden','Was braucht Ihre Aufmerksamkeit?','Kein Spam. Kein Druck. Ein echtes Gespräch.','Anfrage senden',
+          'Angeboten vom <a href="https://www.biofieldawareness.com" target="_blank" rel="noopener noreferrer">Biofield Awareness Institute</a> in Zusammenarbeit mit <a href="https://coherence.earth" target="_blank" rel="noopener noreferrer">Coherence Earth</a>.'
+        ],
+        capacities: {
+          presence: ['01 / 09','Selbstbewusstsein und Präsenz','Den eigenen inneren Zustand, Annahmen, das Verhalten und die Wirkung auf andere wahrnehmen und zugleich aufmerksam für das bleiben, was gerade geschieht.','Stresssignale vor einer Antwort wahrnehmen und Beobachtungen von Annahmen unterscheiden.'],
+          regulation: ['02 / 09','Emotionale Regulation','Stress und Anspannung so weit regulieren, dass eine bewusste Antwort statt einer automatischen Reaktion möglich wird.','Vor einer schwierigen Antwort innehalten und eine zur Situation passende Reaktion wählen.'],
+          recovery: ['03 / 09','Resilienz und Erholung','Unter Druck wirksam bleiben und nach Störungen, Konflikten oder Veränderungen wieder Stabilität finden.','Sich nach einer schwierigen Besprechung erholen und ohne unnötige Anspannung wieder einsteigen.'],
+          communication: ['04 / 09','Authentische Kommunikation','Informationen, Bedürfnisse, Bedenken und Perspektiven klar, direkt und angemessen ausdrücken.','Ein Thema frühzeitig ansprechen und Unsicherheit benennen, ohne vermeidbare Unruhe auszulösen.'],
+          listening: ['05 / 09','Tiefes Zuhören und Empathie','Die Bedeutung und Erfahrung einer anderen Person verstehen, bevor man interpretiert, antwortet oder Lösungen sucht.','Das Gehörte zurückspiegeln und klärende Fragen stellen, bevor man nach Lösungen sucht.'],
+          repair: ['06 / 09','Konfliktkompetenz und Klärung','Spannungen früh erkennen, Meinungsverschiedenheiten konstruktiv angehen und tragfähige Beziehungen nach einem Bruch wiederherstellen.','Den eigentlichen Streitpunkt erkennen, Auswirkungen anerkennen und eine praktische Klärung vereinbaren.'],
+          trust: ['07 / 09','Vertrauen und psychologische Sicherheit','Bedingungen schaffen, unter denen Menschen offen sprechen, Fragen stellen, Fehler eingestehen und Bedenken äußern können, ohne unnötige zwischenmenschliche Risiken.','Unsicherheit besprechbar machen und konstruktiv reagieren, wenn jemand ein Problem anspricht.'],
+          ownership: ['08 / 09','Geteilte Verantwortung und Führung','Verantwortung für Ergebnisse übernehmen und zugleich anderen ermöglichen beizutragen, selbst zu urteilen und eigenständig zu handeln.','Entscheidungsbefugnisse klären und andere dabei unterstützen, aus ihrer Rolle heraus Führung zu übernehmen.'],
+          systems: ['09 / 09','Systemdenken und Urteilsvermögen','Bei Entscheidungen den Kontext, wechselseitige Abhängigkeiten, Zielkonflikte und längerfristige Folgen berücksichtigen.','Über eine unmittelbare Lösung hinausblicken und akuten Druck von strategischer Bedeutung unterscheiden.']
+        }
+      }
+    };
+    const capacityData = {
+      presence: ['01 / 09', 'Self-awareness<br>and presence', "Recognizing one's internal state, assumptions, behaviour, and effect on others while staying attentive to what is happening now.", 'Noticing stress signals before responding and separating observation from assumption.'],
+      regulation: ['02 / 09', 'Emotional<br>regulation', 'Managing stress and activation well enough to respond intentionally rather than react automatically.', 'Pausing before a difficult reply and choosing a response that fits the situation.'],
+      recovery: ['03 / 09', 'Resilience<br>and recovery', 'Maintaining effectiveness during pressure and returning to steadiness after disruption, conflict, or change.', 'Recovering after a difficult meeting and re-engaging without carrying unnecessary activation forward.'],
+      communication: ['04 / 09', 'Authentic<br>communication', 'Expressing information, needs, concerns, and perspectives clearly, directly, and appropriately.', 'Raising an issue early and naming uncertainty without creating avoidable alarm.'],
+      listening: ['05 / 09', 'Deep listening<br>and empathy', "Understanding another person's meaning and experience before interpreting, responding, or solving.", 'Reflecting back what was heard and asking clarifying questions before moving to solutions.'],
+      repair: ['06 / 09', 'Conflict literacy<br>and repair', 'Recognizing tension early, engaging disagreement constructively, and restoring workable relationships after rupture.', 'Identifying the real point of disagreement, acknowledging impact, and agreeing a practical repair.'],
+      trust: ['07 / 09', 'Trust &amp;<br>psychological safety', 'Creating conditions in which people can speak candidly, ask questions, acknowledge mistakes, and raise concerns without unnecessary interpersonal risk.', 'Making uncertainty discussable and responding constructively when someone flags a problem.'],
+      ownership: ['08 / 09', 'Shared ownership<br>and leadership', 'Taking responsibility for outcomes while enabling others to contribute, exercise judgment, and act with agency.', 'Clarifying decision rights while supporting others to lead from their role.'],
+      systems: ['09 / 09', 'Systems thinking<br>and discernment', 'Considering context, interdependencies, trade-offs, and longer-term consequences when making decisions.', 'Looking beyond an immediate fix and distinguishing urgent pressure from strategic importance.']
+    };
+    const detail = document.querySelector('.capacity-detail');
+    let currentLanguage = 'en';
+    let detailTimer;
+    const nodes = document.querySelectorAll('.capacity-node');
+    function showCapacity(node, animate = true) {
+      const pack = translations[currentLanguage];
+      const [index, title, copy, practice] = (pack.capacities || capacityData)[node.dataset.capacity];
+      document.querySelectorAll('.capacity-node').forEach(item => item.classList.remove('active'));
+      node.classList.add('active');
+      const nodeStyle = getComputedStyle(node);
+      detail.style.setProperty('--detail-tone', nodeStyle.getPropertyValue('--node-tone').trim());
+      detail.style.setProperty('--detail-wash', nodeStyle.getPropertyValue('--detail-wash').trim());
+      clearTimeout(detailTimer);
+      if (animate) detail.classList.add('is-changing');
+      const render = () => { detail.innerHTML = `<span class="capacity-index">${index}</span><h3>${title.replace('<br>', ' ')}</h3><p>${copy}</p><div class="practice"><b>${pack.practice}</b>${practice}</div><span class="interaction-hint">${pack.hint}</span>`; detail.classList.remove('is-changing'); };
+      if (animate) detailTimer = setTimeout(render, 180); else render();
+    }
+    nodes.forEach(node => node.addEventListener('click', () => showCapacity(node)));
+    const nav = document.querySelector('.nav'); window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 45), {passive:true});
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('in-view'); observer.unobserve(entry.target); } }), {threshold: .13});
+    document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+    const constellation = document.querySelector('.constellation');
+    const capacities = document.querySelector('#capacities');
+    const formationObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { constellation.classList.add('assembled'); formationObserver.unobserve(entry.target); }
+    }), { threshold: .42 });
+    formationObserver.observe(capacities);
+    let constellationTicking = false;
+    const updateConstellationParallax = () => {
+      const bounds = capacities.getBoundingClientRect();
+      const progress = Math.max(0, Math.min(1, (window.innerHeight - bounds.top) / (window.innerHeight + bounds.height)));
+      constellation.style.setProperty('--parallax', `${Math.sin(progress * Math.PI) * 12}px`);
+      constellation.style.setProperty('--orbit-turn', `${(progress - .5) * 12}deg`);
+      constellationTicking = false;
+    };
+    window.addEventListener('scroll', () => { if (!constellationTicking) { requestAnimationFrame(updateConstellationParallax); constellationTicking = true; } }, { passive: true });
+    updateConstellationParallax();
+    const contactForm = document.querySelector('#contact-form');
+    const languageField = document.createElement('input');
+    languageField.type = 'hidden';
+    languageField.name = 'preferred_language';
+    contactForm.appendChild(languageField);
+    const contactStatus = contactForm.querySelector('.form-success');
+    const contactButton = contactForm.querySelector('button[type="submit"]');
+    const textTargets = [
+      '.skip-link', '.nav-links > a:nth-child(1)', '.nav-links > a:nth-child(2)', '.nav-links > a:nth-child(3)', '.nav-button',
+      '.hero-kicker', '.hero-question', '.hero-reframe', '.hero-summary', '.hero-actions .button:first-child', '.hero-actions .button--line',
+      '.intro .eyebrow', '.intro-coda', ...Array.from({length:3}, (_,i) => `.principle:nth-child(${i+1}) p`),
+      '.outcomes .eyebrow', '.outcomes h2', '.outcomes-header .section-copy',
+      ...Array.from({length:6}, (_,i) => [`.outcome:nth-child(${i+1}) h3`, `.outcome:nth-child(${i+1}) p`]).flat(),
+      '.capacities .eyebrow', '.capacities h2', '.capacities .section-copy', '.core-sub',
+      ...Array.from({length:9}, (_,i) => `.capacity-node:nth-child(${i+2})`),
+      '.method .eyebrow', '.method h2', '.method-header .section-copy',
+      ...Array.from({length:3}, (_,i) => [`.method-step:nth-child(${i+1}) h3`, `.method-step:nth-child(${i+1}) p`]).flat(),
+      '.coach-layout > div .eyebrow', '.coach-layout h2', '.coach-layout .section-copy', '.coach-card .eyebrow', '.coach-card > p:not(.eyebrow)', '.coach-card .button',
+      '.contact-wrap > div:first-child .eyebrow', '.contact h2', '.contact .section-copy',
+      'label[for="name"]', 'label[for="email"]', 'label[for="role"]', 'label[for="interest"]',
+      ...Array.from({length:4}, (_,i) => `#interest option:nth-child(${i+1})`),
+      'label[for="message"]', '.form-note', '#contact-form button[type="submit"]', 'footer > div:nth-child(2)'
+    ].map(selector => {
+      const element = document.querySelector(selector);
+      if (!element) throw new Error('Missing translation target: ' + selector);
+      const textNode = element.matches('.hero-kicker') ? element.lastChild : element.classList.contains('button') && element.querySelector('svg') ? element.firstChild : null;
+      return { element, textNode, original: textNode ? textNode.textContent : element.innerHTML, originalMarkup: element.innerHTML };
+    });
+    // Stable option values keep form submissions and analytics comparable across languages.
+    document.querySelectorAll('#interest option').forEach(option => { option.value = option.textContent; });
+    const languagePicker = document.querySelector('#language');
+    let formState = 'idle';
+    function setLanguage(language) {
+      currentLanguage = translations[language] ? language : 'en';
+      const pack = translations[currentLanguage];
+      document.documentElement.lang = {en:'en-CA', fr:'fr-CA', nl:'nl', de:'de'}[currentLanguage];
+      textTargets.forEach((target, index) => {
+        const value = currentLanguage === 'en' ? target.original : pack.text[index];
+        if (target.textNode && !target.element.contains(target.textNode)) {
+          target.element.innerHTML = target.originalMarkup;
+          target.textNode = target.element.firstChild;
+        }
+        if (target.textNode) target.textNode.textContent = value + ' ';
+        else target.element.innerHTML = value;
+      });
+      languagePicker.value = currentLanguage;
+      languageField.value = currentLanguage;
+      languagePicker.setAttribute('aria-label', {en:'Language',fr:'Langue',nl:'Taal',de:'Sprache'}[currentLanguage]);
+      document.querySelector('.nav').setAttribute('aria-label', {en:'Main navigation',fr:'Navigation principale',nl:'Hoofdnavigatie',de:'Hauptnavigation'}[currentLanguage]);
+      document.querySelector('.brand').setAttribute('aria-label', {en:'Coherence Coaching home',fr:'Accueil de Coherence Coaching',nl:'Coherence Coaching startpagina',de:'Coherence Coaching Startseite'}[currentLanguage]);
+      document.querySelector('.constellation').setAttribute('aria-label', {en:'Interactive coherence capacities',fr:'Capacités de cohérence interactives',nl:'Interactieve capaciteiten voor samenhang',de:'Interaktive Kohärenzfähigkeiten'}[currentLanguage]);
+      document.querySelector('.core').setAttribute('aria-label', {en:'Coherence in Practice',fr:'Coherence en pratique',nl:'Coherence in de praktijk',de:'Coherence in der Praxis'}[currentLanguage]);
+      document.querySelector('.hero-photo').alt = {en:'An Asian woman facilitates a coaching conversation around a circular table',fr:'Une femme asiatique anime une discussion de coaching autour d’une table ronde',nl:'Een Aziatische vrouw begeleidt een coachingsgesprek rond een ronde tafel',de:'Eine asiatische Frau moderiert ein Coachinggespräch an einem runden Tisch'}[currentLanguage];
+      showCapacity(document.querySelector('.capacity-node.active'), false);
+      if (formState === 'sending') contactButton.textContent = pack.sending;
+      if (formState === 'success') { contactButton.textContent = pack.received; contactStatus.textContent = pack.success; }
+      if (formState === 'error') contactStatus.textContent = pack.error;
+      try { localStorage.setItem('coherence-language', currentLanguage); } catch (error) { /* Storage may be unavailable. */ }
+    }
+    languagePicker.addEventListener('change', () => setLanguage(languagePicker.value));
+    let savedLanguage = 'en';
+    try { savedLanguage = localStorage.getItem('coherence-language') || 'en'; } catch (error) { /* Use English. */ }
+    setLanguage(savedLanguage);
+    contactForm.addEventListener('submit', async event => {
+      event.preventDefault();
+      if (!contactForm.checkValidity()) { contactForm.reportValidity(); return; }
+      contactStatus.textContent = {
+        en: 'This is a review preview. The inquiry form is not sending messages.',
+        fr: 'Ceci est un aperçu pour révision. Le formulaire n’envoie pas de messages.',
+        nl: 'Dit is een beoordelingsvoorbeeld. Het formulier verzendt geen berichten.',
+        de: 'Dies ist eine Vorschau zur Überprüfung. Das Formular sendet keine Nachrichten.'
+      }[currentLanguage];
+      contactStatus.classList.remove('is-error');
+      contactStatus.style.display = 'block';
+      return;
+      formState = 'sending';
+      contactButton.disabled = true;
+      contactButton.textContent = translations[currentLanguage].sending;
+      contactStatus.style.display = 'none';
+      contactStatus.classList.remove('is-error');
+      try {
+        const response = await fetch(contactForm.action, { method: 'POST', body: new FormData(contactForm), headers: { Accept: 'application/json' } });
+        if (!response.ok) throw new Error('Form submission failed');
+        gtag('event', 'generate_lead', { form_id: 'coherence_coaching_inquiry', interest: contactForm.elements.interest.value });
+        contactForm.reset();
+        formState = 'success';
+        contactButton.textContent = translations[currentLanguage].received;
+        contactStatus.textContent = translations[currentLanguage].success;
+        contactStatus.style.display = 'block';
+      } catch (error) {
+        formState = 'error';
+        contactButton.disabled = false;
+        setLanguage(currentLanguage);
+        contactStatus.textContent = translations[currentLanguage].error;
+        contactStatus.classList.add('is-error');
+        contactStatus.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
